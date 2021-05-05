@@ -8,53 +8,59 @@
 #include <math.h>
 #include <limits.h>
 #include <float.h>
+#include <cstdlib>
 using namespace std;
 
-int n, m; //node, edge
-//vector<pair<int, double>> adj[10001];
+int n, m; //행 열
+string arr[1001];
+vector<vector<int>> dp;
 
-void dijkstra(int src, vector<pair<int, double>> adj[]){
-    vector<double> dist(n, DBL_MAX);
-    dist[src]=1;
-    priority_queue<pair<double, int>> pq;
-    pq.push(make_pair(-dist[src], src));
-    while(!pq.empty()){
-        double cost = -pq.top().first;
-        int here = pq.top().second;
-        pq.pop();
-        
-        if (dist[here] < cost) continue;
-        for (int i=0; i<adj[here].size(); i++){
-            double nextDist = (cost)*(adj[here][i].second);
-            int there = adj[here][i].first;
-            if (dist[there] > nextDist){
-                dist[there] = nextDist;
-//                cout<<"updating : dist["<<there<<"]  - "<<nextDist<<endl;
-                pq.push(make_pair(-dist[there], there));
-            }
-        }
+bool worm(int rowpivot, int colpivot, int len){
+    // 여기서 dp 처리
+    if (rowpivot+len>=n || colpivot+len>=m) return false;
+    for (int i=rowpivot; i<=rowpivot+len; i++){
+        if (arr[i][colpivot+len] == '0') return false;
     }
-    cout<<fixed;
-    cout.precision(10);
-    cout<<dist[n-1]<<endl;
+    for (int i=colpivot; i<=colpivot+len; i++){
+        if (arr[rowpivot+len][i] == '0') return false;
+    }
+    return true;
+}
+
+int bigsquare(int rowStart, int colStart, int len){
+//    cout<<"진입"<<rowStart<<", "<<colStart<<", "<<len<<endl;
+    if (rowStart+len >= n || colStart+len>=m) return 0; // 범위 넘어가면 0 리턴
+    if (arr[rowStart][colStart] == '0') return 0;
+    
+    if (worm(rowStart, colStart, len) == true){
+        return 1+bigsquare(rowStart, colStart, len+1);
+    }
+    else {
+        return 0;
+    }
 }
 
 int main(){
-    cin.sync_with_stdio(0);
-    cin.tie(0);
-    int c;
-    cin>>c;
-    for (int i=0; i<c; i++){
-        
-        cin>>n>>m;
-        int a, b;
-        double c;
-        vector<pair<int, double>> adj[10001];
+    
+    cin>>n>>m;
+    
+    dp = vector<vector<int>>(n, vector<int>(m, 1));
+    int maximum=0;
+    for (int i=0; i<n; i++){
         for (int j=0; j<m; j++){
-            cin>>a>>b>>c;
-            adj[a].push_back(make_pair(b, c));
-            adj[b].push_back(make_pair(a, c));
+            cin>>arr[i][j];
         }
-        dijkstra(0, adj);
     }
+    
+    
+    for (int i=0; i<n; i++){
+        for (int j=0; j<m; j++){
+            int temp = bigsquare(i, j, 0);
+            if (maximum < temp){
+                maximum = temp;
+//                cout<<"* i : "<<i<<", j : "<<j<<", temp : "<<temp<<endl;
+            }
+        }
+    }
+    cout<<maximum*maximum;
 }
