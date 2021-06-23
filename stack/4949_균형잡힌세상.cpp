@@ -5,11 +5,11 @@ using namespace std;
 
 int main(){
     while(1){
-        char ch;
         stack<char> stack;
         bool stable=true;
         string str;
-        cin>>str;
+        getline(cin, str);
+        if (str == ".") break;
         for (int i=0; i<str.size(); i++){
             if (str[i] == '(' || str[i] == '[') stack.push(str[i]);
             else if (str[i] == ')'){
