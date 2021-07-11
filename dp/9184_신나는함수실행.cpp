@@ -11,6 +11,7 @@ using namespace std;
 
 int dp[101][101][101];
 
+
 int funny(int a, int b, int c){
     if (a<=0 || b<=0 || c<=0) return 1;
     if (dp[50+a][50+b][50+c] != 0) return dp[50+a][50+b][50+c];
