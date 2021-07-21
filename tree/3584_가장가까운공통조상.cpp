@@ -65,6 +65,7 @@ int main(){
             node[a].push_back(b);
 //            node[b].push_back(a);
         }
+        //hello
         makeParent(1, 0);
         int a, b;
         cin>>a>>b;
