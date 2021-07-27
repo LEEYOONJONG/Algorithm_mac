@@ -1,30 +1,38 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+//#include <conio.h>
 
 int main(void)
-
 {
-   char fruit;
+   char ch, i, j, k, l,Q;
+   int x, y;
+   x = 0;
+   y = 0;
 
-   int num, price, total,a,b;
-
-   a = 990;
-   b = 1280;
-   total = 0;
-
-   printf("과일 입력:");
-   scanf("%c", &fruit);
-
-
-   printf("개수 입력:");
-   scanf("%d", &num);
-
-   price = (fruit == a) ? 990 : 1280;
-
-   total = price * num;
+   printf("문자 i,j,k,l중 하나를 입력하시오");
    
-   printf("결제 금액은 %d원 입니다.\n", total);
-   
-   
+
+   while (1)
+   {
+      
+      printf("\n입력된 문자:");
+      ch = _getch();
+
+      if (ch == 'i')
+         y += 1;
+      else if (ch == 'k')
+         y -= 1;
+      else if (ch == 'j')
+         x += 1;
+      else if (ch == 'l')
+         x -= 1;
+      else if (ch == 'Q')
+         break;
+
+      printf("\n x좌표:%d, y좌표:%d", x, y);
+   }
+   printf("종료되었습니다.");
+
    return 0;
+
 }
