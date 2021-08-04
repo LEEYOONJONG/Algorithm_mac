@@ -23,6 +23,7 @@
 		980008D12693DAFE0066DC1C /* 15650_n과m2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "15650_n과m2.cpp"; sourceTree = "<group>"; };
 		9800727426B7A397001056A6 /* 1912_연속합.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1912_연속합.cpp"; sourceTree = "<group>"; };
 		9800727626B7C576001056A6 /* 1461_도서관.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1461_도서관.cpp"; sourceTree = "<group>"; };
+		9800727826B8F7A3001056A6 /* 1238_파티.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1238_파티.cpp"; sourceTree = "<group>"; };
 		98055B7725C6BDA60001C487 /* acmicpc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = acmicpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		98055B7A25C6BDA60001C487 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9805DF07264E389100991EED /* 토마토.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "토마토.cpp"; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 				982BBAA1269D34B500E260AF /* 9663_nqueen.cpp */,
 				98EA907C26A7D7FC002591DF /* 1012_유기농배추.cpp */,
 				985A515F26B3A6F8000B2729 /* 1199_오일러회로.cpp */,
+				9800727826B8F7A3001056A6 /* 1238_파티.cpp */,
 			);
 			path = graph;
 			sourceTree = "<group>";
