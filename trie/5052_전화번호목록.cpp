@@ -46,7 +46,7 @@ struct Trie{
         
         int curr = *key - '0';
         // 이미 끝났는데 목록에 뒤이어 남아있는 문자가 있다면
-        if (*(key+1) == '\0' && next[curr] != NULL) return false;
+       if (*(key+1) == '\0' && next[curr] != NULL) return false;
         return next[curr] -> consistent(key+1);
     }
 };
