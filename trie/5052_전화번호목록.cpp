@@ -8,7 +8,7 @@ struct Trie{
     
     Trie* next[10];
     
-    Trie(): finish(false){
+    Trie(){
         memset(next, 0, sizeof(next));
         finish = false;
     }
@@ -22,6 +22,7 @@ struct Trie{
         else{
 //            finish = false;
             int curr = *key - '0'; // // curr는 A
+//            cout<<"curr : "<<curr<<endl;
             if (next[curr] == NULL){
                 next[curr] = new Trie(); // ABC였다면 BC를 인서트
             }
@@ -29,25 +30,25 @@ struct Trie{
         }
     }
     bool consistent(const char* key){
-//        if (*key == '\0'){
-//            // 이제 아무것도 찾을게 없고 기존 Trie의 문자열도 종료되었다면
-//            if (finish) return true;
-//            // 이제 아무것도 찾을게 없는데 종료 안됨 ex. ABC 에서 AB를 탐색한다면
-//            else return false;
-//        }
-//        int curr = *key - '0'; // 문자열의 맨 앞 문자
-//        if (next[curr] == NULL) return false; //
-//        return next[curr] -> find(key+1);
-        if (*key == '\0'){
+        
+        if (*key == '\0') return false; // ex) 91125 vs 911
+        // 9 vs 9
+        
+        if (next[*key-'0'] != NULL){
+            // 이미 존재한다면, 재귀적으로 계속 들어감. 단 이게 끝이었다면 not consistent
+            if (next[*key-'0']->finish){ // 이게 끝이라면 ex) 911 vs 91125
+                return false;   // not consistent
+            }
+            else {
+//                cout<<"consistent : "<<*key<<" - go next"<<endl;
+                return next[*key-'0']->consistent(key+1);
+            }
+        }
+        // 1 vs 7
+        else{
+//            cout<<"consistent : "<<*key<<" - 다름"<<endl;
             return true;
         }
-        // 뒤에 더 남아있지만 이미 목록에 존재한다면
-        if (*(key+1) != '\0' && finish == true) return false;
-        
-        int curr = *key - '0';
-        // 이미 끝났는데 목록에 뒤이어 남아있는 문자가 있다면
-       if (*(key+1) == '\0' && next[curr] != NULL) return false;
-        return next[curr] -> consistent(key+1);
     }
 };
 
@@ -64,7 +65,7 @@ int main(){
             cin>>input;
             
             if (j==0) tri.insert(input);
-            else if (j != 0){
+            else{
                 if (tri.consistent(input) == true) tri.insert(input);
                 else {
                     isConsistent = false;
