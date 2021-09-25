@@ -2,7 +2,7 @@
 #include <cstring>
 #include <algorithm>
 using namespace std;
-// 많이 참고햇음../
+// 많이 참고햇음..//
 int n;
 int arr[20][20];
 int dp[20][1<<20];
