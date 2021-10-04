@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9833A7652706A90F000951CC /* 12852_1로만들기2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9833A7642706A90F000951CC /* 12852_1로만들기2.cpp */; };
+		982BF971270AD8FA008D8BEA /* 2020_F_Escaping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 982BF970270AD8FA008D8BEA /* 2020_F_Escaping.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +50,8 @@
 		982BBAA5269FD52500E260AF /* 14499_주사위굴리기.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "14499_주사위굴리기.cpp"; sourceTree = "<group>"; };
 		982BBAA726A06B5300E260AF /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		982BBAA926A06BA000E260AF /* test_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_c.c; sourceTree = "<group>"; };
+		982BF96D270969AB008D8BEA /* hw2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hw2.c; sourceTree = "<group>"; };
+		982BF970270AD8FA008D8BEA /* 2020_F_Escaping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2020_F_Escaping.cpp; sourceTree = "<group>"; };
 		98333EEA26424E2A0074B204 /* 타일채우기.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "타일채우기.cpp"; sourceTree = "<group>"; };
 		98333EF026425FA30074B204 /* 2xn타일링2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "2xn타일링2.cpp"; sourceTree = "<group>"; };
 		9833A7642706A90F000951CC /* 12852_1로만들기2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "12852_1로만들기2.cpp"; sourceTree = "<group>"; };
@@ -132,6 +134,8 @@
 		98055B6E25C6BDA50001C487 = {
 			isa = PBXGroup;
 			children = (
+				982BF96F270AD8E1008D8BEA /* ICPC */,
+				982BF96C2709696C008D8BEA /* C_lang */,
 				98A943DC26F5BF5F00C7A317 /* prefixsum */,
 				987FE3A826F1D03500EB9809 /* deque */,
 				987DFD1726E4B449004AAFC6 /* binarysearch */,
@@ -203,6 +207,22 @@
 				9806A20126A5261E0013449E /* 3584_가장가까운공통조상.cpp */,
 			);
 			path = tree;
+			sourceTree = "<group>";
+		};
+		982BF96C2709696C008D8BEA /* C_lang */ = {
+			isa = PBXGroup;
+			children = (
+				982BF96D270969AB008D8BEA /* hw2.c */,
+			);
+			path = C_lang;
+			sourceTree = "<group>";
+		};
+		982BF96F270AD8E1008D8BEA /* ICPC */ = {
+			isa = PBXGroup;
+			children = (
+				982BF970270AD8FA008D8BEA /* 2020_F_Escaping.cpp */,
+			);
+			path = ICPC;
 			sourceTree = "<group>";
 		};
 		9861E91426E06F9400DDDD40 /* sort */ = {
@@ -388,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9833A7652706A90F000951CC /* 12852_1로만들기2.cpp in Sources */,
+				982BF971270AD8FA008D8BEA /* 2020_F_Escaping.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
