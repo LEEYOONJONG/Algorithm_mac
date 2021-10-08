@@ -38,20 +38,24 @@ int main(){
     queue<int> que;
     bool tempVisit[100001]={false,};
     
-    for (int i=0; i<dangerous.size(); i++) que.push(dangerous[i]);
+    for (int i=0; i<dangerous.size(); i++){
+        que.push(dangerous[i]);
+        tempVisit[dangerous[i]] = true;
+    }
     
     for (int i=0; i<s; i++){
         // 현재 queue에 있는걸 다 꺼내서 그 이웃 집어넣고 state에 반영
         int queSize = que.size();
         for (int j=0; j<queSize; j++){
             int top = que.front();
-            tempVisit[top] = true; // 방문처리
+            
             que.pop();
             // top 이웃의 상태를 '위험'으로
             for (int neigh=0; neigh<route[top].size(); neigh++){
                 int now = route[top][neigh];
                 if (tempVisit[now]) continue; // 방문했으면 다시 넣을필요 없다.
                 state[now] = -1;
+                tempVisit[now] = true; // 방문처리
                 que.push(now);
             }
         }
