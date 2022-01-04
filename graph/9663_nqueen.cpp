@@ -31,7 +31,7 @@ void queens(int i){
         }
         else{
             for (int j=1; j<=n; j++){
-                col[i+1] = j;
+                col[i+1] = j; // col[1~n행] = j ;
                 queens(i+1);
             }
         }
