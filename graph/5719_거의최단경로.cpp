@@ -23,7 +23,7 @@ struct Data{
     Data(){};
     Data(int node, int weight): node(node), weight(weight){};
     bool operator<(const Data d) const {
-        return weight > d.weight; //내림차순
+        return weight > d.weight; //오름차순
     }
 };
 
