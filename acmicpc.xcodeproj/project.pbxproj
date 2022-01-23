@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		980B4906279B04F200A46824 /* 2243_사탕상자.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980B4905279B04F200A46824 /* 2243_사탕상자.cpp */; };
+		98E8E7CA279CF1E400E54FAE /* 1041_주사위.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98E8E7C9279CF1E400E54FAE /* 1041_주사위.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -146,6 +146,7 @@
 		98DA6F84265E0A34008BD8FF /* 데크.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "데크.cpp"; sourceTree = "<group>"; };
 		98DD5EA527520372007B1AF4 /* 22986_Flatearth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 22986_Flatearth.cpp; sourceTree = "<group>"; };
 		98E5079926B27A3F00AEA2EA /* 1918_후위표기식.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1918_후위표기식.cpp"; sourceTree = "<group>"; };
+		98E8E7C9279CF1E400E54FAE /* 1041_주사위.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1041_주사위.cpp"; sourceTree = "<group>"; };
 		98EA907C26A7D7FC002591DF /* 1012_유기농배추.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1012_유기농배추.cpp"; sourceTree = "<group>"; };
 		98ED5CA72787D6020002C8DA /* 11051_이항계수2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "11051_이항계수2.cpp"; sourceTree = "<group>"; };
 		98ED5CA9278809F30002C8DA /* 5568_카드놓기.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "5568_카드놓기.cpp"; sourceTree = "<group>"; };
@@ -463,6 +464,7 @@
 			children = (
 				989724CF26953B2A007ABB06 /* 1484_다이어트.cpp */,
 				9816BC0A27958CDA001942FC /* 2012_등수매기기.cpp */,
+				98E8E7C9279CF1E400E54FAE /* 1041_주사위.cpp */,
 				9800727626B7C576001056A6 /* 1461_도서관.cpp */,
 			);
 			path = greedy;
@@ -592,7 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				980B4906279B04F200A46824 /* 2243_사탕상자.cpp in Sources */,
+				98E8E7CA279CF1E400E54FAE /* 1041_주사위.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
