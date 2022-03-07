@@ -1,56 +1,79 @@
 #include <iostream>
 #include <cstring>
-#include <algorithm>
 #include <queue>
-#include <utility>
+#include <vector>
+#include <stack>
 using namespace std;
 
-int dp[1001][1001];
-
+int dp[1010][1010];
+bool visited[1010][1010];
+queue<pair<int, int>> que;
+stack<char> st;
+string a, b;
 int main(){
-    string a, b;
     cin>>a>>b;
-    
-    for (int i=1; i<=a.size(); i++){
-        for (int j=1; j<=b.size(); j++){
-            if (a[i-1] == b[j-1]){
-                dp[i][j] = 1;
+    for (int mapB=1; mapB<=b.size(); mapB++){
+        for (int mapA=1; mapA<=a.size(); mapA++){
+            int strA = mapA-1;
+            int strB = mapB-1;
+            if (b[strB] == a[strA]){
+                dp[mapB][mapA] = dp[mapB-1][mapA-1] + 1;
             }
+            else{
+                dp[mapB][mapA] = max(dp[mapB-1][mapA], dp[mapB][mapA-1]);
+            }
+            
         }
     }
-    int res=0;
-    for (int i=1; i<=a.size(); i++){
-        for (int j=1; j<=b.size(); j++){
-            if (a[i-1] == b[j-1]){
-                dp[i][j] = dp[i-1][j-1]+1;
-            }
-            else {
-                dp[i][j] = max(dp[i][j-1], dp[i-1][j]);
-            }
-        }
-    }
-    for (int i=0; i<=a.size(); i++){
-        for (int j=0; j<=b.size(); j++){
-            cout<<dp[i][j]<<' ';
-        }
-        cout<<endl;
-    }
-    cout<<res;
-    queue<pair<int, int>> que;
-    que.push(make_pair(a.size(), b.size()));
-    
-    // 위, 왼쪽 중 숫자가 같은 방향으로 이동해야.
-//    while(!que.empty()){
-//        pair<int, int> top = que.front();
-//        que.pop();
-//        int aIndex = top.first-1;
-//        int bIndex = top.second-1;
-//        if (a[aIndex] == b[bIndex]){
-//
+//    for (int i=0; i<=b.size(); i++){
+//        for (int j=0; j<=a.size(); j++){
+//            cout<<dp[i][j]<<' ';
 //        }
-//        else {
-//            que.push(make_pair(top.first-1, top.second));
-//            que.push(make_pair(top.first, top.second-1));
-//        }
+//        cout<<endl;
 //    }
+    cout<<dp[b.size()][a.size()]<<'\n';
+    
+    if (dp[b.size()][a.size()] == 0) return 0;
+    que.push(make_pair(b.size(), a.size()));
+
+    
+    while(!que.empty()){
+        int toprow = que.front().first;
+        int topcol = que.front().second;
+        visited[toprow][topcol] = true;
+        que.pop();
+        if (toprow==0 || topcol==0) continue;
+        // 왼쪽으로만 이동가능하다면
+        if (dp[toprow][topcol-1] == dp[toprow][topcol]  &&  dp[toprow-1][topcol] != dp[toprow][topcol]){
+            if (!visited[toprow][topcol-1])
+                que.push(make_pair(toprow, topcol-1));
+        }
+        // 위쪽으로만 이동가능하다면
+        else if (dp[toprow-1][topcol] == dp[toprow][topcol] && dp[toprow][topcol-1] != dp[toprow][topcol]){
+            if (!visited[toprow-1][topcol])
+                que.push(make_pair(toprow-1, topcol));
+        }
+        // 둘다 가능하다면
+        else if (dp[toprow][topcol-1] == dp[toprow][topcol]  &&  dp[toprow-1][topcol] == dp[toprow][topcol]){
+            if (!visited[toprow][topcol-1])
+                que.push(make_pair(toprow, topcol-1));
+            if (!visited[toprow-1][topcol])
+                que.push(make_pair(toprow-1, topcol));
+        }
+//        둘다 불가능하다면
+        else{
+            st.push(a[topcol-1]);
+
+            // 다 도달했다면 종료
+            if (dp[toprow][topcol] == 1) break;
+            que = queue<pair<int, int>>();
+
+            if (!visited[toprow-1][topcol-1]) que.push(make_pair(toprow-1, topcol-1));
+        }
+       
+    }
+    while(!st.empty()){
+        cout<<st.top();
+        st.pop();
+    }
 }
