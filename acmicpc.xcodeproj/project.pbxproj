@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98D1CD7B27FB1F9E004231B4 /* 11505_구간곱구하기.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98D1CD7A27FB1F9E004231B4 /* 11505_구간곱구하기.cpp */; };
+		98B8824027FC10E200A53C24 /* 7578_공장.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B8823F27FC10E200A53C24 /* 7578_공장.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -173,6 +173,7 @@
 		98A943DD26F5BF7A00C7A317 /* 3673_나눌수있는부분수열.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "3673_나눌수있는부분수열.cpp"; sourceTree = "<group>"; };
 		98AF0977270FE468005668F6 /* 11952_좀비.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "11952_좀비.cpp"; sourceTree = "<group>"; };
 		98AF099B27104601005668F6 /* ProjectTeams.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectTeams.cpp; sourceTree = "<group>"; };
+		98B8823F27FC10E200A53C24 /* 7578_공장.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "7578_공장.cpp"; sourceTree = "<group>"; };
 		98C84C21279999CF00F682D1 /* 2517_달리기.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "2517_달리기.cpp"; sourceTree = "<group>"; };
 		98C9634326F475CB00E99E16 /* 1005_ACMCraft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1005_ACMCraft.cpp; sourceTree = "<group>"; };
 		98CB56FD2739816800028CB8 /* NAMING.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NAMING.cpp; sourceTree = "<group>"; };
@@ -415,6 +416,7 @@
 				983E588427857B2A003EE7BE /* 2042_구간합구하기.cpp */,
 				98D1CD7827FB0769004231B4 /* 2357_최솟값과최댓값.cpp */,
 				98D1CD7A27FB1F9E004231B4 /* 11505_구간곱구하기.cpp */,
+				98B8823F27FC10E200A53C24 /* 7578_공장.cpp */,
 				983E58892786ADA6003EE7BE /* 1275_커피숍2.cpp */,
 				980B4905279B04F200A46824 /* 2243_사탕상자.cpp */,
 				98C84C21279999CF00F682D1 /* 2517_달리기.cpp */,
@@ -752,7 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D1CD7B27FB1F9E004231B4 /* 11505_구간곱구하기.cpp in Sources */,
+				98B8824027FC10E200A53C24 /* 7578_공장.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
