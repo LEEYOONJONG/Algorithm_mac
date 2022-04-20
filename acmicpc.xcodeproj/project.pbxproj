@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98781845280E9BCD00C806F5 /* 11062_카드게임.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98781844280E9BCD00C806F5 /* 11062_카드게임.cpp */; };
+		98C31CB6280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98C31CB5280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -185,6 +185,8 @@
 		98AF0977270FE468005668F6 /* 11952_좀비.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "11952_좀비.cpp"; sourceTree = "<group>"; };
 		98AF099B27104601005668F6 /* ProjectTeams.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectTeams.cpp; sourceTree = "<group>"; };
 		98B8823F27FC10E200A53C24 /* 7578_공장.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "7578_공장.cpp"; sourceTree = "<group>"; };
+		98C31CB3280FD7CA00B111FA /* 11057_오르막수.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "11057_오르막수.cpp"; sourceTree = "<group>"; };
+		98C31CB5280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2342_DanceDanceRevolution.cpp; sourceTree = "<group>"; };
 		98C84C21279999CF00F682D1 /* 2517_달리기.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "2517_달리기.cpp"; sourceTree = "<group>"; };
 		98C9634326F475CB00E99E16 /* 1005_ACMCraft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1005_ACMCraft.cpp; sourceTree = "<group>"; };
 		98CB56FD2739816800028CB8 /* NAMING.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NAMING.cpp; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				988C9DE62791C5E700528425 /* 11659_구간합구하기4.cpp */,
 				989F269B278FA7AC0005CCC2 /* 1932_정수삼각형.cpp */,
 				98781844280E9BCD00C806F5 /* 11062_카드게임.cpp */,
+				98C31CB3280FD7CA00B111FA /* 11057_오르막수.cpp */,
 				9806E64B2699E63300711DAC /* 9184_신나는함수실행.cpp */,
 				988C9DE4279148A500528425 /* 2618_경찰차.cpp */,
 				9800727426B7A397001056A6 /* 1912_연속합.cpp */,
@@ -628,6 +631,7 @@
 				980DBB3627C852FD000AF0C3 /* 11660_구간합구하기5.cpp */,
 				98CC545B27F7046C006169B0 /* 7579_앱.cpp */,
 				9859FF8127FE7BE60007E6BE /* 1106_호텔.cpp */,
+				98C31CB5280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp */,
 			);
 			path = dp;
 			sourceTree = "<group>";
@@ -792,7 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98781845280E9BCD00C806F5 /* 11062_카드게임.cpp in Sources */,
+				98C31CB6280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
