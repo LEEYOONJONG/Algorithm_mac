@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98C31CB6280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98C31CB5280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp */; };
+		98C31CE92811289B00B111FA /* 9328_열쇠.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98C31CE82811289B00B111FA /* 9328_열쇠.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -187,6 +187,8 @@
 		98B8823F27FC10E200A53C24 /* 7578_공장.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "7578_공장.cpp"; sourceTree = "<group>"; };
 		98C31CB3280FD7CA00B111FA /* 11057_오르막수.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "11057_오르막수.cpp"; sourceTree = "<group>"; };
 		98C31CB5280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2342_DanceDanceRevolution.cpp; sourceTree = "<group>"; };
+		98C31CB7280FE7B500B111FA /* swiftcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftcode.swift; sourceTree = "<group>"; };
+		98C31CE82811289B00B111FA /* 9328_열쇠.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "9328_열쇠.cpp"; sourceTree = "<group>"; };
 		98C84C21279999CF00F682D1 /* 2517_달리기.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "2517_달리기.cpp"; sourceTree = "<group>"; };
 		98C9634326F475CB00E99E16 /* 1005_ACMCraft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1005_ACMCraft.cpp; sourceTree = "<group>"; };
 		98CB56FD2739816800028CB8 /* NAMING.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NAMING.cpp; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				982BF96D270969AB008D8BEA /* hw2.c */,
+				98C31CB7280FE7B500B111FA /* swiftcode.swift */,
 			);
 			path = C_lang;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				9847495427D6F391009CD839 /* 2178_미로탐색.cpp */,
 				9847495627D71BDF009CD839 /* 18352_특정거리의도시찾기.cpp */,
 				98A3F77127D8E90200FA9A25 /* 14442_벽부수고이동하기2.cpp */,
+				98C31CE82811289B00B111FA /* 9328_열쇠.cpp */,
 			);
 			path = bfs;
 			sourceTree = "<group>";
@@ -770,6 +774,7 @@
 				TargetAttributes = {
 					98055B7625C6BDA50001C487 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -796,7 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98C31CB6280FE1A700B111FA /* 2342_DanceDanceRevolution.cpp in Sources */,
+				98C31CE92811289B00B111FA /* 9328_열쇠.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,18 +922,33 @@
 		98055B7F25C6BDA60001C487 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		98055B8025C6BDA60001C487 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
