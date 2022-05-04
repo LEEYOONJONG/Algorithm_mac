@@ -1,17 +1,22 @@
 #include <iostream>
-#include <cstring>
+#include <vector>
+
 using namespace std;
 
-int main()
-{
-    int input1 = 1234;
-    double input2 = 12.34;
+int main() {
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(5);
+    v.push_back(10);
+    cout << "원래 배열 : ";
+    for (auto i : v)
+        cout << i << " ";
+    cout << endl;
     
-    string str1 = to_string(input1);
-    string str2 = to_string(input2);
-    
-    cout<<str1<<endl; // 1234
-    cout<<str2<<endl; // 12.340000 <- 유의
-    
-    return 0;
+    v.erase(remove(v.begin(), v.end(), 3), v.end()); // 원소 3 지우기
+    cout << "지운 후 : ";
+    for (auto i : v)
+        cout << i << " ";
 }
