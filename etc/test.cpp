@@ -1,22 +1,21 @@
+//#include <bits/stdc++.h>
+#include <regex>
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
-int main() {
-    vector<int> v;
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
-    v.push_back(5);
-    v.push_back(10);
-    cout << "원래 배열 : ";
-    for (auto i : v)
-        cout << i << " ";
-    cout << endl;
-    
-    v.erase(remove(v.begin(), v.end(), 3), v.end()); // 원소 3 지우기
-    cout << "지운 후 : ";
-    for (auto i : v)
-        cout << i << " ";
+int solution(string s) {
+    s = regex_replace(s, regex("zero"), "0");
+    s = regex_replace(s, regex("one"), "1");
+    s = regex_replace(s, regex("two"), "2");
+    s = regex_replace(s, regex("three"), "3");
+    s = regex_replace(s, regex("four"), "4");
+    s = regex_replace(s, regex("five"), "5");
+    s = regex_replace(s, regex("six"), "6");
+    s = regex_replace(s, regex("seven"), "7");
+    s = regex_replace(s, regex("eight"), "8");
+    s = regex_replace(s, regex("nine"), "9");
+    return stoi(s);
+}
+int main(){
+    cout<<solution("onezero8nine");
 }
