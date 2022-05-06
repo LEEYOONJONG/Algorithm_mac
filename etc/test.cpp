@@ -1,21 +1,14 @@
-//#include <bits/stdc++.h>
-#include <regex>
 #include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
-int solution(string s) {
-    s = regex_replace(s, regex("zero"), "0");
-    s = regex_replace(s, regex("one"), "1");
-    s = regex_replace(s, regex("two"), "2");
-    s = regex_replace(s, regex("three"), "3");
-    s = regex_replace(s, regex("four"), "4");
-    s = regex_replace(s, regex("five"), "5");
-    s = regex_replace(s, regex("six"), "6");
-    s = regex_replace(s, regex("seven"), "7");
-    s = regex_replace(s, regex("eight"), "8");
-    s = regex_replace(s, regex("nine"), "9");
-    return stoi(s);
-}
-int main(){
-    cout<<solution("onezero8nine");
+
+int main() {
+    vector<int> v = { 1, 3, 4, 4, 7, 10, 10, 10, 13, 17 };
+    sort(v.begin(), v.end());
+    cout << "lower_bound: " << lower_bound(v.begin(), v.end(), 7) - v.begin() << endl;
+    cout << "lower_bound: " << lower_bound(v.begin(), v.end(), 8) - v.begin() << endl;
+    cout << "upper_bound: " << upper_bound(v.begin(), v.end(), 8) - v.begin() << endl;
+    return 0;
 }
