@@ -3,7 +3,8 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "iosfwd": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "map": "cpp"
     },
     "files.exclude": {
         "*.dSYM": true,
