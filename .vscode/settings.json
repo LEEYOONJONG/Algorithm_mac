@@ -4,7 +4,13 @@
         "ostream": "cpp",
         "iosfwd": "cpp",
         "vector": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "queue": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
     },
     "files.exclude": {
         "*.dSYM": true,
