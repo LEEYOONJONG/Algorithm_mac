@@ -12,7 +12,7 @@ struct Data{
     bool operator< (const Data d) const {
         return weight>d.weight;
     }
-};
+}; 
  
 int find(int a){
     if (a == parent[a]) {
@@ -21,7 +21,7 @@ int find(int a){
     return parent[a] = find(parent[a]);
 }
 
-void uni(int a, int b){ //aë¥¼ bì—
+void uni(int a, int b){ //a¸¦ b¿¡
     parent[find(a)] = find(b);
 }
 
